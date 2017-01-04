@@ -33,7 +33,7 @@ class App extends Component {
           <Logo className="App-logo"/>
           <h2>Welcome to React</h2>
         </div>
-        <h1> Rolling Stone Top 100 Album (2012 edition) </h1>
+        <h1> Rolling Stone Top 100 Albums (2012 edition) </h1>
         <p> Table is sortable by clicking header rows. </p>
         <p> Table is modifyiable with Actions buttons. </p>
         <span> <Actions onAction={type => alert(type)} /> </span>

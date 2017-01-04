@@ -1,5 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-It is also based on the book [React Up and Running](https://github.com/stoyan/reactbook). All js/jsx code was entered, debugged, and thoroughly commented by hand. As my focus was learning React/JSX/ES6, CSS code was taken directly from the reactbook repository with minimal change. As this was a learning exercise, the commenting is more than usual.<br>
+It is also based on the book [React Up and Running](https://github.com/stoyan/reactbook). All js/jsx code was entered, debugged, and thoroughly commented by hand. The focus here was learning React/JSX/ES6, so the CSS code was taken directly from the reactbook repository with minimal change. As this was a learning exercise, the commenting is more than usual.<br>
 Below you will find some information on how to perform common tasks.<br>
 
 ## Synopsis
@@ -21,14 +21,14 @@ Development Build:
 ```
 npm update
 npm start
-Direct browser to [localhost:3000](http://localhost:3000)
 ```
+Direct browser to [localhost:3000](http://localhost:3000)
 
 Deploy:
 ```
 npm run build
-Copy ./build folder to root directory of server to which to deploy
 ```
+Copy ./build folder to root directory of server to which to deploy
 
 ## Contributors
 
