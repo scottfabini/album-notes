@@ -10,26 +10,33 @@ class Form extends Component {
     return data;
   }
   render() {
+    /* Renders a generic form, where the 'type' prop determines which HTML form type */
     return (
       <form className="Form">
-      {this.props.fields.map(field => {
-        const prefilled = this.props.initialData && this.props.initialData[field.id];
-        if (!this.props.readonly) {
+        {this.props.fields.map(field => {
+          const prefilled = this.props.initialData && this.props.initialData[field.id];
+          if (!this.props.readonly) {
+            return (
+              <div className="FormRow" key={field.id}>
+                {/* The for/htmlFor attribute of the <label> tag should be equal to the id attribute of the related element */}
+                {/* This is just a convenience, so you can click on the text label of a form box (e.g. 'Greetings') and it will activate the text box */}
+                <label className="FormLabel" htmlFor={field.id}> 
+                  {field.label}: 
+                </label>
+                <FormInput {...field} ref={field.id} defaultValue={prefilled} />
+              </div>
+            );
+          }
+          if (!prefilled) {
+            return null;
+          }
           return (
-            <div className="FormRow" key={field.id}>
-            <label className="FormLabel" htmlFor={field.id}>{field.label}:</label>
-            <FormInput {...field} ref={field.id} defaultValue={prefilled} />
-            </div>
-          );
-        }
-        if (!prefilled) {
-          return null;
-        }
-        return (
-          <div>
-            
-          </div>);
-      }, this)}</form>
+            <div>
+              
+            </div>);
+        }, 
+        this)}
+      </form>
     );
   }
 }

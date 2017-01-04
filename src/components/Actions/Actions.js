@@ -4,8 +4,7 @@ require('./style.css');
 /**
   The callers of the Actions component can sign up for the action event using the
   onAction property. 
-  Example: <Actions onAction ={type => alert(type)} />
-  This is an example of data binding from child to parent in React.
+  Example: <Actions onAction={type => alert(type)} />
   This pattern allows for a child to inform its parent of a change within the component.
 */
 const Actions = props =>
@@ -32,14 +31,14 @@ const Actions = props =>
 
 Actions.propTypes = {
   /**
-   * A function which will be bound and triggered on click of the action button 
+   * A function prop, which will be bound and triggered on click of the action button 
    */
   onAction: PropTypes.func
 };
 
 Actions.defaultProps={
   /**
-   * Default: empty function
+   * Default: empty function (ES6 arrow)
    */
   onAction: () => {}
 };

@@ -14,6 +14,9 @@ class Dialog extends Component {
   }
 
   render() {
+    /** 
+      A Dialog consists of a header, body, footer, and cancel/confirm button
+    */
     return (
       <div className={this.props.modal ? 'Dialog DialogModal' : 'Dialog'}>
         <div className={this.props.modal ? 'DialogModalWrap' : null}>

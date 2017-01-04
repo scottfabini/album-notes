@@ -2,13 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from './Button';
 
-
-describe('A passing test', function() {
-  it('should pass a basic test', function() {
-    expect(true).toBe(true);
-  });
-});
-
 describe('Render <Button> components', () => {
   it('renders <button> vs. <a>', () => {
     const div = document.createElement('div');
@@ -21,7 +14,7 @@ describe('Render <Button> components', () => {
 });
 
 describe('Render <A> components', () => {
-  it('renders <a> vs. <button>', () => {
+  it('renders <a> instead of <button>when an href prop is passed in', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <Button href="#">Hello</Button>

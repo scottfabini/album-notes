@@ -60,7 +60,7 @@ class Rating extends Component {
       stars.push(
         /* 
           This span is constantly looking for whether state.tmpRating === false.
-          If true, className='RatingOn', 
+          If true, className='RatingOn', and the star is highlighted by CSS
          */
         <span
         className={i <= this.state.tmpRating ? 'RatingOn' : null}

@@ -8,6 +8,7 @@ class FormInput extends Component {
     ? this.refs.input.value: this.refs.input.getValue();
   }
   render() {
+    /* Renders a form of various types */
     const common = {
       id: this.props.id,
       ref: 'input',
